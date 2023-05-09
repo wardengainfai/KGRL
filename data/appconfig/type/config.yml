@@ -1,0 +1,11 @@
+root: root
+
+data: data
+test-data: test_data
+
+kg-model-checkpoint: kg_model_checkpoint
+checkpoint: checkpoint
+
+ontology: ontology
+maze-ontology: maze_ontology
+minigrid-ontology: minigrid_ontology

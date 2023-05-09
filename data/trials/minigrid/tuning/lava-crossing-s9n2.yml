@@ -1,0 +1,58 @@
+_type: minigrid-experiment-config
+
+internal-environment-name: kg-minigrid-env-v0
+external-environment-name: MiniGrid-LavaCrossingS9N2-v0
+
+max-env-steps: 2000
+
+seed: 1099315105
+
+agent: dqn
+library: stable-baselines  # or rllib or tune
+deterministic: False
+
+policy: [256, 256, 256, 128]
+
+logging:
+  log-interval: 50
+  tensorboard: false
+
+train:
+  n-timesteps: 800000
+  exploration-fraction: 0.4
+  batch-size: 128
+  n-steps: 100
+  learning-rate:
+    initial-value: 0.00002
+    schedule: cubic
+  n-episodes: -1
+  observation-type: dict
+
+eval:
+  step-delay: 0.05
+  n-episodes: 5
+  frequency:
+    value: 10
+    unit: episode
+  frequency-max:
+    value: 3000
+    unit: step
+  start: 10
+
+enable-kg: false
+kg-wrapper:
+  k-nn-k: 10
+  reveal: knn_embedding
+  model:
+    dim: 8
+  train:
+    n-epochs: 700
+
+optimize:
+  pruner: halving  # halving, median, none
+  sampler: tpe_sampler  # random, tpe_sampler, skopt_sampler
+  n-processes: 4
+  max-total-trials: 400
+  no-optim-plots: true
+  stop-reward: 0.98
+  average-evaluations: auc

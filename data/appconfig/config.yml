@@ -1,0 +1,15 @@
+_type: config
+
+root: /home/User/kgrl
+
+data: '{{root}}/data'
+test-data: '{{data}}/test'
+
+checkpoint: '{{data}}/checkpoints'
+kg-model-checkpoint: '{{checkpoint}}/{experiment_name}/graph_embedding'
+
+ontology: '{{data}}/ontologies'
+maze-ontology: '{{ontology}}/maze_ontology.ttl'
+minigrid-ontology: '{{ontology}}/minigrid_ontology.ttl'
+
+

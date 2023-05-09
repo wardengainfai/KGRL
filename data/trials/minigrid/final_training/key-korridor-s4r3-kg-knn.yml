@@ -1,0 +1,51 @@
+_type: minigrid-experiment-config
+
+internal-environment-name: kg-minigrid-env-v0
+external-environment-name: MiniGrid-KeyCorridorS4R3-v0
+
+max-env-steps: 50000
+
+seed: [773922072, 978649433, 478155652, 726446115, 487363773, 144659057, 77824913, 686706874, 459822015, 30272394]
+
+agent: dqn
+library: stable-baselines  # or rllib or tune
+deterministic: False
+
+policy: [256, 256, 256, 128]
+
+logging:
+  log-interval: 5
+  tensorboard: false
+
+train:
+  n-timesteps: 2500000
+  exploration-fraction: 0.4
+  batch-size: 128
+  n-steps: 100
+  learning-rate:
+    initial-value: 0.00002
+    schedule: cubic
+  n-episodes: -1
+  observation-type: dict
+
+eval:
+  step-delay: 0.05
+  n-episodes: 10
+  n-steps: 20000
+  frequency:
+    value: 4000
+    unit: step
+  frequency-max:
+    value: 1
+    unit: episode
+  start: 1
+
+enable-kg: true
+kg-wrapper:
+  rw-k: 10
+  k-nn-k: 10
+  reveal: knn_embedding
+  model:
+    dim: 12
+  train:
+    n-epochs: 1200

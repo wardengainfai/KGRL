@@ -1,0 +1,8 @@
+_super: kg-wrapper-config
+
+original-observation-keys: original_observation_keys
+dynamic-kg: dynamic_kg
+
+transform-mission: transform_mission
+n-triples: n_triples
+er-padding: er_padding

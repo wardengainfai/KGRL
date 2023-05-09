@@ -1,0 +1,17 @@
+{
+  "experiment_name" : "Minigrid_kg_wrapper_experiment1",
+  "minigrid_env_name": "MiniGrid-DoorKey-5x5-v0",
+  "library": "stable_baselines3",
+  "trainer_train_batch_size": 512,
+  "training_total_timesteps": 10000,
+  "training_exploration_fraction": 0.5,
+  "checkpoint_frequency": -1,
+  "headless": true,
+  "num_gpus": 1,
+  "kg_wrapper_enabled": true,
+  "eval_freq": 20,
+  "eval_n_episodes": 1,
+  "policy_net_arch": [512,512,512],
+  "log_to_tensorboard": true,
+  "kg_wrapper_config": {"embedding_epochs":  50}
+}

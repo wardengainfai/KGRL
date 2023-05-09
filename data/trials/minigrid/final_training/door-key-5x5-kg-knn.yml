@@ -1,0 +1,63 @@
+_type: minigrid-experiment-config
+
+
+internal-environment-name: kg-minigrid-env-v0
+external-environment-name: MiniGrid-DoorKey-5x5-v0
+
+max-env-steps: 2000
+
+seed: [1608637542, 1273642419, 1935803228,  787846414,  996406378, 1201263687, 423734972,  415968276,  670094950, 1914837113]
+
+agent: dqn
+library: stable-baselines
+deterministic: False
+
+policy: [256, 256, 256]
+
+logging:
+  log-interval: 10
+
+train:
+  n-timesteps: 300000
+  buffer-size: 200000
+  exploration-fraction: 0.3
+  batch-size: 128
+  learning-rate:
+    initial-value: 0.00005
+    schedule: linear
+    kwargs:  # as-is
+      truncate: False
+  n-episodes: -1
+  observation-type: dict
+
+eval:
+  step-delay: 0.05
+  n-episodes: 10
+  n-steps: null
+  frequency:
+    value: 1500
+    unit: step
+  frequency-max:
+    value: 1
+    unit: episode
+  start: 20
+
+enable-kg: true
+
+kg-wrapper:
+  k-nn-k: 10
+  rw-k: 10
+  reveal: knn_embedding # either of knn_embedding, random_walk, random_walk_embedding
+  model:
+    dim: 12
+  train:
+    n-epochs: 1000
+
+optimize:
+  pruner: halving  # halving, median, none
+  sampler: tpe_sampler  # random, tpe_sampler, skopt_sampler
+  n-processes: 4
+  max-total-trials: 400
+  no-optim-plots: true
+  stop-reward: 0.99
+  average-evaluations: auc

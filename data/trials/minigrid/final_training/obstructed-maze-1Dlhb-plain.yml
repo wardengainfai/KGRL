@@ -1,0 +1,50 @@
+_type: minigrid-experiment-config
+
+internal-environment-name: kg-minigrid-env-v0
+external-environment-name: MiniGrid-ObstructedMaze-1Dlhb-v0
+
+max-env-steps: 6000
+
+seed: [1005857220, 289045130, 791782655, 143489601, 958470142, 716245875, 627855053, 917030444, 279688001, 109907404]
+
+agent: dqn
+library: stable-baselines  # or rllib or tune
+deterministic: False
+
+policy: [256, 256, 256, 128]
+
+logging:
+  log-interval: 10
+  tensorboard: false
+
+train:
+  n-timesteps: 600000
+  exploration-fraction: 0.4
+  batch-size: 128
+  n-steps: 100
+  learning-rate:
+    initial-value: 0.00002
+    schedule: cubic
+  n-episodes: -1
+  observation-type: dict
+
+eval:
+  step-delay: 0.05
+  n-episodes: 10
+  frequency:
+    value: 2000
+    unit: step
+  frequency-max:
+    value: 1
+    unit: episode
+  start: 5
+
+enable-kg: false
+kg-wrapper:
+  k-nn-k: 10
+  reveal: knn_embedding
+  model:
+    dim: 8
+  train:
+    n-epochs: 700
+

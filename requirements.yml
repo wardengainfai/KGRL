@@ -1,0 +1,34 @@
+name: kgrl
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch>=1.10.1
+  - cudatoolkit~=11.3
+  - networkx
+  - matplotlib
+  - pip
+  - git
+  - scikit-learn
+  - pandas>=1.5
+  - rdflib
+  - rdflib-jsonld
+  - numpy<=1.23
+  - pyglet
+  - seaborn
+  - tqdm
+  - tensorboard
+  - stable-baselines3>=1.4.0
+  - pydantic
+  - optuna
+  - sentence-transformers
+  - pip:
+      - pykeen
+      - gym-minigrid==1.1.0
+      - gym==0.22
+      - git+https://github.com/zeionara/cuco.git@master
+      - git+https://github.com/MattChanTK/gym-maze.git
+      - pyamaze==1.0.1

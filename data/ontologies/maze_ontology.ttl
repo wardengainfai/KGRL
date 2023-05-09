@@ -1,0 +1,118 @@
+@prefix : <urn:webprotege:ontology:66792800-e72c-4507-9cc8-187d744ed824#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <urn:webprotege:ontology:66792800-e72c-4507-9cc8-187d744ed824> .
+
+<urn:webprotege:ontology:66792800-e72c-4507-9cc8-187d744ed824> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://webprotege.stanford.edu/R79ihZELSWei0BV0KmwwBWS
+<http://webprotege.stanford.edu/R79ihZELSWei0BV0KmwwBWS> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf <http://webprotege.stanford.edu/RDi4oyInsH2S0d1c8VuySbh> ;
+                                                         rdfs:label "West" .
+
+
+###  http://webprotege.stanford.edu/R8EFdCdGqiXFOTbCaYXU3hD
+<http://webprotege.stanford.edu/R8EFdCdGqiXFOTbCaYXU3hD> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/RC6trw6eIbSDSeW71p2M6b2> ;
+                                                         rdfs:range <http://webprotege.stanford.edu/RHqYNVCI3HQqVMHxVHB6Ed> ;
+                                                         rdfs:label "hasAction" .
+
+
+###  http://webprotege.stanford.edu/R9oRe2rrLYF6RMUCGla0PK4
+<http://webprotege.stanford.edu/R9oRe2rrLYF6RMUCGla0PK4> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf <http://webprotege.stanford.edu/RDi4oyInsH2S0d1c8VuySbh> ;
+                                                         rdfs:label "East" .
+
+
+###  http://webprotege.stanford.edu/RBWMRi9XDldGH0lrsDPrETy
+<http://webprotege.stanford.edu/RBWMRi9XDldGH0lrsDPrETy> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf <http://webprotege.stanford.edu/RDi4oyInsH2S0d1c8VuySbh> ;
+                                                         rdfs:label "North" .
+
+
+###  http://webprotege.stanford.edu/RDi4oyInsH2S0d1c8VuySbh
+<http://webprotege.stanford.edu/RDi4oyInsH2S0d1c8VuySbh> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/RC6trw6eIbSDSeW71p2M6b2> ;
+                                                         rdfs:range <http://webprotege.stanford.edu/RC6trw6eIbSDSeW71p2M6b2> ;
+                                                         rdfs:label "hasConnection"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/RDlOJWvB1gxbUThYLfdoJcD
+<http://webprotege.stanford.edu/RDlOJWvB1gxbUThYLfdoJcD> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf <http://webprotege.stanford.edu/RDi4oyInsH2S0d1c8VuySbh> ;
+                                                         rdfs:label "South" .
+
+
+###  http://webprotege.stanford.edu/RaNJDAJGrxqU7VvV52xsKZ
+<http://webprotege.stanford.edu/RaNJDAJGrxqU7VvV52xsKZ> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain <http://webprotege.stanford.edu/RC6trw6eIbSDSeW71p2M6b2> ;
+                                                        rdfs:range <http://webprotege.stanford.edu/RCirVwlmOAKJuoIWkJ5tPeT> ;
+                                                        rdfs:label "hasIndex" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://webprotege.stanford.edu/RBdaVspmcugOCRE77I44T7v
+<http://webprotege.stanford.edu/RBdaVspmcugOCRE77I44T7v> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/RC6trw6eIbSDSeW71p2M6b2> ;
+                                                         rdfs:label "Room"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/RC6trw6eIbSDSeW71p2M6b2
+<http://webprotege.stanford.edu/RC6trw6eIbSDSeW71p2M6b2> rdf:type owl:Class ;
+                                                         rdfs:label "Cell" .
+
+
+###  http://webprotege.stanford.edu/RCQIVacFuIoxASGFb9DaoBV
+<http://webprotege.stanford.edu/RCQIVacFuIoxASGFb9DaoBV> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/RHqYNVCI3HQqVMHxVHB6Ed> ;
+                                                         rdfs:label "TurnSouth" .
+
+
+###  http://webprotege.stanford.edu/RCirVwlmOAKJuoIWkJ5tPeT
+<http://webprotege.stanford.edu/RCirVwlmOAKJuoIWkJ5tPeT> rdf:type owl:Class ;
+                                                         rdfs:label "Index" .
+
+
+###  http://webprotege.stanford.edu/RD0qahMcP15Mieq0LnvlHq
+<http://webprotege.stanford.edu/RD0qahMcP15Mieq0LnvlHq> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://webprotege.stanford.edu/RHqYNVCI3HQqVMHxVHB6Ed> ;
+                                                        rdfs:label "TurnEast" .
+
+
+###  http://webprotege.stanford.edu/RDiJXRZvzYfIZYyX30zeyzC
+<http://webprotege.stanford.edu/RDiJXRZvzYfIZYyX30zeyzC> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/RHqYNVCI3HQqVMHxVHB6Ed> ;
+                                                         rdfs:label "TurnWest" .
+
+
+###  http://webprotege.stanford.edu/RHqYNVCI3HQqVMHxVHB6Ed
+<http://webprotege.stanford.edu/RHqYNVCI3HQqVMHxVHB6Ed> rdf:type owl:Class ;
+                                                        rdfs:label "Action" .
+
+
+###  http://webprotege.stanford.edu/RTsio52ZwbGrC78UurCwWt
+<http://webprotege.stanford.edu/RTsio52ZwbGrC78UurCwWt> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://webprotege.stanford.edu/RHqYNVCI3HQqVMHxVHB6Ed> ;
+                                                        rdfs:label "TurnNorth" .
+
+
+###  http://webprotege.stanford.edu/RijveJ9C8xu0oBM1iPC2zL
+<http://webprotege.stanford.edu/RijveJ9C8xu0oBM1iPC2zL> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://webprotege.stanford.edu/RC6trw6eIbSDSeW71p2M6b2> ;
+                                                        rdfs:label "Wall" .
+
+
+###  Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi

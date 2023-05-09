@@ -1,0 +1,7 @@
+kwargs:
+  _type: null
+  _self: kwargs
+
+dim: dim
+include-walls: include_walls
+architecture: architecture

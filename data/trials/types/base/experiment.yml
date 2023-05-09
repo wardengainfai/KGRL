@@ -1,0 +1,75 @@
+batch-size: trainer_train_batch_size
+
+agent: agent
+library: library
+deterministic: deterministic
+env: experiment_env_name
+
+policy:
+  _type: list
+  _self: policy_net_arch
+
+checkpoint:
+  _type: experiment-checkpoint-config
+  _self: checkpoint
+
+logging:
+  _type: experiment-logging-config
+  _self: logging
+
+train:
+  _type: experiment-train-config
+  _self: train
+
+eval:
+  _type: experiment-eval-config
+  _self: eval
+
+optimize:
+  _type: experiment-hyperparameter-optimization-config
+  _self: hyperparameter_optimization
+
+enable-kg: kg_wrapper_enabled
+
+kg-wrapper:
+  _type: kg-maze-wrapper-config
+  _self: kg_wrapper_config
+
+experiment-name-prefix: experiment_name
+
+max-env-steps: max_env_steps
+
+# kg wrapper fields (not supported yet)
+
+# reveal-state: reveal-state
+# reveal-graph: reveal-graph
+# enable-knowledge-graph: kg_wrapper_enabled
+# 
+# k-nn-k: k_nn_k
+# embedding-dim: embedding_dim
+# reveal-knn-embedding: reveal_knn_embedding
+# reveal-subgraph: reveal_subgraph
+# include-walls: include_walls
+
+# deprecated fields
+
+# n-train-steps: training_steps
+# learning-rate: training_lr
+# exploration-fraction: training_exploration_fraction
+# n-max-episodes: training_max_episodes
+
+# n-eval-episodes: evaluation_n_episodes
+# max-eval-episode-length: evaluation_max_episode_length
+# eval-frequency: eval_freq
+# eval-start: eval_start
+# evaluation-step-delay: evaluation_step_delay
+
+# fields which are set from cli command
+
+# disable-tqdm: not_use_tqdm
+# headless: experiment_headless
+
+# minigrid only fields (not supported yet)
+
+# internal-environment-name: experiment_env_name
+# external-environment-name: minigrid_env_name

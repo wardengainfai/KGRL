@@ -1,0 +1,9 @@
+split:
+  _type: split-config
+  _self: split
+
+kwargs:
+  _type: null
+  _self: kwargs
+
+n-epochs: n_epochs

@@ -1,0 +1,28 @@
+# trainer-config:
+#   _self: trainer_config
+#   foo: foo
+
+frequency:
+  _type: frequency
+  _self: frequency
+n-steps: steps
+n-timesteps: total_timesteps
+exploration-fraction: exploration_fraction
+exploration-final-eps: exploration_final_eps
+buffer-size: buffer_size
+n-episodes: max_episodes
+observation-type: observation_type
+target-update-interval: target_update_interval
+gamma: gamma
+learning-starts: learning_starts
+
+rollout-fragment-length: rollout_fragment_length
+batch-mode: batch_mode
+batch-size: batch_size
+
+n-gpus: n_gpus
+n-workers: n_workers
+
+learning-rate:
+  _type: learning-rate
+  _self: learning_rate

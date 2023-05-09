@@ -1,0 +1,15 @@
+verbose: verbose
+pruner: pruner
+sampler: sampler
+
+seed: seed
+n-startup-trials: n_startup_trials
+max-total-trials: max_total_trials
+n-processes: n_processes
+n-trials: n_trials
+
+stop-reward: stop_reward
+
+average-evaluations: average_evaluations
+
+no-optim-plots: no_optim_plots

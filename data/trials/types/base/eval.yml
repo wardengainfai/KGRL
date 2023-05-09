@@ -1,0 +1,11 @@
+frequency:
+  _type: frequency
+  _self: frequency
+frequency-max:
+    _type: frequency
+    _self: frequency_max
+start: start
+n-episodes: n_episodes
+n-steps: max_episode_length
+run-during-training: run_during_training
+step-delay: step_delay

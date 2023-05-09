@@ -1,0 +1,59 @@
+_type: minigrid-experiment-config
+
+
+internal-environment-name: kg-minigrid-env-v0
+external-environment-name: MiniGrid-DoorKey-16x16-v0
+
+max-env-steps: 25000
+
+agent: dqn
+library: stable-baselines  # or rllib or tune
+deterministic: False
+
+policy: [256, 256, 256]
+
+logging:
+  log-interval: 10
+  tensorboard: true
+
+train:
+  n-timesteps: 5000000
+  buffer-size: 750000
+  exploration-fraction: 0.4
+  batch-size: 512
+  n-steps: 100
+  learning-rate:
+    initial-value: 0.00002
+    final-value: 0.0000005
+    schedule: quadratic
+  n-episodes: 800
+  observation-type: dict
+
+eval:
+  step-delay: 0.05
+  n-episodes: 10
+  n-steps: 15000
+  frequency:
+    value: 20
+    unit: episode
+  frequency-max:
+    value: 2500
+    unit: step
+  start: 30
+
+enable-kg: false
+kg-wrapper:
+  k-nn-k: 10
+  reveal: knn_embedding
+  model:
+    dim: 8
+  train:
+    n-epochs: 700
+
+optimize:
+  pruner: halving  # halving, median, none
+  sampler: tpe_sampler  # random, tpe_sampler, skopt_sampler
+  n-processes: 16
+  n-trials: 300
+  no-optim-plots: true
+  average-evaluations: 4

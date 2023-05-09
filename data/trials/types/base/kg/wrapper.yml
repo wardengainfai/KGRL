@@ -1,0 +1,25 @@
+checkpoint:
+  _type: kg-model-checkpoint-config
+  _self: checkpoint
+
+train:
+  _type: kg-model-train-config
+  _self: train
+
+eval:
+  _type: kg-model-eval-config
+  _self: eval
+
+model:
+  _type: kg-model-config
+  _self: model
+
+reveal: reveal
+kg-path: kg_path
+observation-as-dict: observation_as_dict
+load-from-checkpoint: load_from_checkpoint
+subgraph-depth: subgraph_depth
+subgraph-directional: subgraph_directional
+k-nn-k: k_nn_k
+rw-k: rw_k
+observation-visualize: visualize_kg_obs

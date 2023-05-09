@@ -1,0 +1,4 @@
+log-interval: log_interval
+tensorboard: tensorboard
+wandb: wandb
+path: path

@@ -1,0 +1,245 @@
+@prefix maze: <http://webprotege.stanford.edu/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+maze:R79ihZELSWei0BV0KmwwBWS a owl:ObjectProperty ;
+    rdfs:label "West" ;
+    rdfs:subPropertyOf maze:RDi4oyInsH2S0d1c8VuySbh .
+
+maze:R8EFdCdGqiXFOTbCaYXU3hD a owl:ObjectProperty ;
+    rdfs:label "hasAction" ;
+    rdfs:domain maze:RC6trw6eIbSDSeW71p2M6b2 ;
+    rdfs:range maze:RHqYNVCI3HQqVMHxVHB6Ed ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+maze:R9oRe2rrLYF6RMUCGla0PK4 a owl:ObjectProperty ;
+    rdfs:label "East" ;
+    rdfs:subPropertyOf maze:RDi4oyInsH2S0d1c8VuySbh .
+
+maze:RBWMRi9XDldGH0lrsDPrETy a owl:ObjectProperty ;
+    rdfs:label "North" ;
+    rdfs:subPropertyOf maze:RDi4oyInsH2S0d1c8VuySbh .
+
+maze:RDlOJWvB1gxbUThYLfdoJcD a owl:ObjectProperty ;
+    rdfs:label "South" ;
+    rdfs:subPropertyOf maze:RDi4oyInsH2S0d1c8VuySbh .
+
+maze:RaNJDAJGrxqU7VvV52xsKZ a owl:ObjectProperty ;
+    rdfs:label "hasIndex" ;
+    rdfs:domain maze:RC6trw6eIbSDSeW71p2M6b2 ;
+    rdfs:range maze:RCirVwlmOAKJuoIWkJ5tPeT ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+maze:RijveJ9C8xu0oBM1iPC2zL a owl:Class ;
+    rdfs:label "Wall" ;
+    rdfs:subClassOf maze:RC6trw6eIbSDSeW71p2M6b2 .
+
+<urn:webprotege:ontology:66792800-e72c-4507-9cc8-187d744ed824> a owl:Ontology .
+
+maze:RCirVwlmOAKJuoIWkJ5tPeT a owl:Class ;
+    rdfs:label "Index" .
+
+maze:cell_4_4 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_4_4" ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RCQIVacFuIoxASGFb9DaoBV ;
+    maze:RDlOJWvB1gxbUThYLfdoJcD maze:cell_5_4 .
+
+maze:cell_5_1 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_5_1" ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RD0qahMcP15Mieq0LnvlHq ;
+    maze:R9oRe2rrLYF6RMUCGla0PK4 maze:cell_5_2 .
+
+maze:cell_5_5 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_5_5" ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RTsio52ZwbGrC78UurCwWt ;
+    maze:RBWMRi9XDldGH0lrsDPrETy maze:cell_4_5 .
+
+maze:cell_1_1 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_1_1" ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RCQIVacFuIoxASGFb9DaoBV,
+        maze:RD0qahMcP15Mieq0LnvlHq ;
+    maze:R9oRe2rrLYF6RMUCGla0PK4 maze:cell_1_2 ;
+    maze:RDlOJWvB1gxbUThYLfdoJcD maze:cell_2_1 .
+
+maze:cell_1_2 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_1_2" ;
+    maze:R79ihZELSWei0BV0KmwwBWS maze:cell_1_1 ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RD0qahMcP15Mieq0LnvlHq,
+        maze:RDiJXRZvzYfIZYyX30zeyzC ;
+    maze:R9oRe2rrLYF6RMUCGla0PK4 maze:cell_1_3 .
+
+maze:cell_1_3 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_1_3" ;
+    maze:R79ihZELSWei0BV0KmwwBWS maze:cell_1_2 ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RD0qahMcP15Mieq0LnvlHq,
+        maze:RDiJXRZvzYfIZYyX30zeyzC ;
+    maze:R9oRe2rrLYF6RMUCGla0PK4 maze:cell_1_4 .
+
+maze:cell_1_4 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_1_4" ;
+    maze:R79ihZELSWei0BV0KmwwBWS maze:cell_1_3 ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RD0qahMcP15Mieq0LnvlHq,
+        maze:RDiJXRZvzYfIZYyX30zeyzC ;
+    maze:R9oRe2rrLYF6RMUCGla0PK4 maze:cell_1_5 .
+
+maze:cell_1_5 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_1_5" ;
+    maze:R79ihZELSWei0BV0KmwwBWS maze:cell_1_4 ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RCQIVacFuIoxASGFb9DaoBV,
+        maze:RDiJXRZvzYfIZYyX30zeyzC ;
+    maze:RDlOJWvB1gxbUThYLfdoJcD maze:cell_2_5 .
+
+maze:cell_2_1 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_2_1" ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RCQIVacFuIoxASGFb9DaoBV,
+        maze:RTsio52ZwbGrC78UurCwWt ;
+    maze:RBWMRi9XDldGH0lrsDPrETy maze:cell_1_1 ;
+    maze:RDlOJWvB1gxbUThYLfdoJcD maze:cell_3_1 .
+
+maze:cell_2_2 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_2_2" ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RCQIVacFuIoxASGFb9DaoBV,
+        maze:RD0qahMcP15Mieq0LnvlHq ;
+    maze:R9oRe2rrLYF6RMUCGla0PK4 maze:cell_2_3 ;
+    maze:RDlOJWvB1gxbUThYLfdoJcD maze:cell_3_2 .
+
+maze:cell_2_3 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_2_3" ;
+    maze:R79ihZELSWei0BV0KmwwBWS maze:cell_2_2 ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RD0qahMcP15Mieq0LnvlHq,
+        maze:RDiJXRZvzYfIZYyX30zeyzC ;
+    maze:R9oRe2rrLYF6RMUCGla0PK4 maze:cell_2_4 .
+
+maze:cell_2_4 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_2_4" ;
+    maze:R79ihZELSWei0BV0KmwwBWS maze:cell_2_3 ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RD0qahMcP15Mieq0LnvlHq,
+        maze:RDiJXRZvzYfIZYyX30zeyzC ;
+    maze:R9oRe2rrLYF6RMUCGla0PK4 maze:cell_2_5 .
+
+maze:cell_2_5 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_2_5" ;
+    maze:R79ihZELSWei0BV0KmwwBWS maze:cell_2_4 ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RDiJXRZvzYfIZYyX30zeyzC,
+        maze:RTsio52ZwbGrC78UurCwWt ;
+    maze:RBWMRi9XDldGH0lrsDPrETy maze:cell_1_5 .
+
+maze:cell_3_1 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_3_1" ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RCQIVacFuIoxASGFb9DaoBV,
+        maze:RTsio52ZwbGrC78UurCwWt ;
+    maze:RBWMRi9XDldGH0lrsDPrETy maze:cell_2_1 ;
+    maze:RDlOJWvB1gxbUThYLfdoJcD maze:cell_4_1 .
+
+maze:cell_3_2 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_3_2" ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RD0qahMcP15Mieq0LnvlHq,
+        maze:RTsio52ZwbGrC78UurCwWt ;
+    maze:R9oRe2rrLYF6RMUCGla0PK4 maze:cell_3_3 ;
+    maze:RBWMRi9XDldGH0lrsDPrETy maze:cell_2_2 .
+
+maze:cell_3_3 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_3_3" ;
+    maze:R79ihZELSWei0BV0KmwwBWS maze:cell_3_2 ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RD0qahMcP15Mieq0LnvlHq,
+        maze:RDiJXRZvzYfIZYyX30zeyzC ;
+    maze:R9oRe2rrLYF6RMUCGla0PK4 maze:cell_3_4 .
+
+maze:cell_3_4 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_3_4" ;
+    maze:R79ihZELSWei0BV0KmwwBWS maze:cell_3_3 ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RD0qahMcP15Mieq0LnvlHq,
+        maze:RDiJXRZvzYfIZYyX30zeyzC ;
+    maze:R9oRe2rrLYF6RMUCGla0PK4 maze:cell_3_5 .
+
+maze:cell_3_5 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_3_5" ;
+    maze:R79ihZELSWei0BV0KmwwBWS maze:cell_3_4 ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RCQIVacFuIoxASGFb9DaoBV,
+        maze:RDiJXRZvzYfIZYyX30zeyzC ;
+    maze:RDlOJWvB1gxbUThYLfdoJcD maze:cell_4_5 .
+
+maze:cell_4_1 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_4_1" ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RD0qahMcP15Mieq0LnvlHq,
+        maze:RTsio52ZwbGrC78UurCwWt ;
+    maze:R9oRe2rrLYF6RMUCGla0PK4 maze:cell_4_2 ;
+    maze:RBWMRi9XDldGH0lrsDPrETy maze:cell_3_1 .
+
+maze:cell_4_2 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_4_2" ;
+    maze:R79ihZELSWei0BV0KmwwBWS maze:cell_4_1 ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RD0qahMcP15Mieq0LnvlHq,
+        maze:RDiJXRZvzYfIZYyX30zeyzC ;
+    maze:R9oRe2rrLYF6RMUCGla0PK4 maze:cell_4_3 .
+
+maze:cell_4_3 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_4_3" ;
+    maze:R79ihZELSWei0BV0KmwwBWS maze:cell_4_2 ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RCQIVacFuIoxASGFb9DaoBV,
+        maze:RDiJXRZvzYfIZYyX30zeyzC ;
+    maze:RDlOJWvB1gxbUThYLfdoJcD maze:cell_5_3 .
+
+maze:cell_4_5 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_4_5" ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RCQIVacFuIoxASGFb9DaoBV,
+        maze:RTsio52ZwbGrC78UurCwWt ;
+    maze:RBWMRi9XDldGH0lrsDPrETy maze:cell_3_5 ;
+    maze:RDlOJWvB1gxbUThYLfdoJcD maze:cell_5_5 .
+
+maze:cell_5_2 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_5_2" ;
+    maze:R79ihZELSWei0BV0KmwwBWS maze:cell_5_1 ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RD0qahMcP15Mieq0LnvlHq,
+        maze:RDiJXRZvzYfIZYyX30zeyzC ;
+    maze:R9oRe2rrLYF6RMUCGla0PK4 maze:cell_5_3 .
+
+maze:cell_5_4 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_5_4" ;
+    maze:R79ihZELSWei0BV0KmwwBWS maze:cell_5_3 ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RDiJXRZvzYfIZYyX30zeyzC,
+        maze:RTsio52ZwbGrC78UurCwWt ;
+    maze:RBWMRi9XDldGH0lrsDPrETy maze:cell_4_4 .
+
+maze:cell_5_3 a maze:RBdaVspmcugOCRE77I44T7v ;
+    rdfs:label "cell_5_3" ;
+    maze:R79ihZELSWei0BV0KmwwBWS maze:cell_5_2 ;
+    maze:R8EFdCdGqiXFOTbCaYXU3hD maze:RD0qahMcP15Mieq0LnvlHq,
+        maze:RDiJXRZvzYfIZYyX30zeyzC,
+        maze:RTsio52ZwbGrC78UurCwWt ;
+    maze:R9oRe2rrLYF6RMUCGla0PK4 maze:cell_5_4 ;
+    maze:RBWMRi9XDldGH0lrsDPrETy maze:cell_4_3 .
+
+maze:RDi4oyInsH2S0d1c8VuySbh a owl:ObjectProperty ;
+    rdfs:label "hasConnection"^^xsd:string ;
+    rdfs:domain maze:RC6trw6eIbSDSeW71p2M6b2 ;
+    rdfs:range maze:RC6trw6eIbSDSeW71p2M6b2 ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+maze:RHqYNVCI3HQqVMHxVHB6Ed a owl:Class ;
+    rdfs:label "Action" .
+
+maze:RC6trw6eIbSDSeW71p2M6b2 a owl:Class ;
+    rdfs:label "Cell" .
+
+maze:RCQIVacFuIoxASGFb9DaoBV a owl:Class ;
+    rdfs:label "TurnSouth" ;
+    rdfs:subClassOf maze:RHqYNVCI3HQqVMHxVHB6Ed .
+
+maze:RTsio52ZwbGrC78UurCwWt a owl:Class ;
+    rdfs:label "TurnNorth" ;
+    rdfs:subClassOf maze:RHqYNVCI3HQqVMHxVHB6Ed .
+
+maze:RD0qahMcP15Mieq0LnvlHq a owl:Class ;
+    rdfs:label "TurnEast" ;
+    rdfs:subClassOf maze:RHqYNVCI3HQqVMHxVHB6Ed .
+
+maze:RDiJXRZvzYfIZYyX30zeyzC a owl:Class ;
+    rdfs:label "TurnWest" ;
+    rdfs:subClassOf maze:RHqYNVCI3HQqVMHxVHB6Ed .
+
+maze:RBdaVspmcugOCRE77I44T7v a owl:Class ;
+    rdfs:label "Room"^^xsd:string ;
+    rdfs:subClassOf maze:RC6trw6eIbSDSeW71p2M6b2 .
+

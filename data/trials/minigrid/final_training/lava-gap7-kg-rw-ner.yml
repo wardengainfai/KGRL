@@ -1,0 +1,49 @@
+_type: minigrid-experiment-config
+
+internal-environment-name: kg-minigrid-env-v0
+
+external-environment-name: MiniGrid-LavaGapS7-v0
+
+agent: dqn
+library: stable-baselines  # or rllib or tune
+deterministic: False
+seed: [1608637542, 1273642419, 1935803228,  787846414,  996406378, 1201263687, 423734972,  415968276,  670094950, 1914837113]
+
+max-env-steps: 10000
+
+logging:
+  log-interval: 50
+  tensorboard: false
+
+train:
+  n-timesteps: 400000
+  exploration-fraction: 0.3
+  batch-size: 512
+  n-steps: 100
+  learning-rate:
+    initial-value: 0.00005
+    schedule: quartic
+  n-episodes: -1 # 10 times more episodes than for without-obstacles environment
+
+eval:
+  step-delay: 0.05
+  n-episodes: 10
+  n-steps: 1500
+  frequency:
+    value: 2000
+    unit: step
+  frequency-max:
+    value: 1
+    unit: episode
+
+enable-kg: True
+kg-wrapper:
+  rw-k: 10
+  reveal: random_walk_embedding
+  model:
+    dim: 12
+  train:
+    n-epochs: 1000
+  load-from-checkpoint: True
+  transform-mission: true
+  n-triples: 3

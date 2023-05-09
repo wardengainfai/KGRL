@@ -1,0 +1,9 @@
+_super: experiment-config
+
+internal-environment-name: experiment_env_name
+external-environment-name: minigrid_env_name
+seed: minigrid_fixed_seed
+
+kg-wrapper:
+  _type: kg-minigrid-wrapper-config
+  _self: kg_wrapper_config
