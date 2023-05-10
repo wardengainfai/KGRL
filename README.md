@@ -4,7 +4,27 @@ This Repository contain the supplemental material corresponding to the submissio
 "Knowledge Graph Injection for Reinforcement Learning".
 
 # Additional Material
+## Appendix file
+An additional Appendix file can be found [here](Appendix.pdf).
+## Ontologies
+The Ontology OWl/TTL for the Minigrid environment is located [here](data/ontologies/minigrid_ontology.ttl)
+## Graph Generator
+The graph generator can be used in the following fashion (for arbitrary Minigrid Environments)
+````python
+import gym_minigrid
+import gym
+from kgrl.use_cases.minigrid.kg.minigrid_graph_generator import MinigridGraphGenerator
 
+# get the environment representation
+env = gym.make("MiniGrid-DoorKey-5x5-v0")
+env_seeded = ReseedWrapper(env, seeds=[42])
+rep = env.grid.encode()
+
+# generate the graph
+generator = MinigridGraphGenerator()
+generator.generate_graph(env_representation=rep)
+generator.print_domain_kg()
+````
 # Reproducing Experiments
 ## Installing
 ### with conda
